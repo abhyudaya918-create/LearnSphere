@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Play a LearnSphere quiz or matching game.">
+  <title>Game · LearnSphere</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/games-data.js" defer></script>
+  <script src="js/progress.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/game.js" defer></script>
+  <script type="module" src="js/auth-ui.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="page-shell game-page">
+    <nav class="breadcrumbs" id="game-breadcrumbs" aria-label="Breadcrumb"></nav>
+    <section class="game-state-screen" id="pregame-screen" hidden></section>
+    <section class="game-state-screen" id="quiz-screen" hidden></section>
+    <section class="game-state-screen" id="matching-screen" hidden></section>
+    <section class="game-state-screen" id="results-screen" hidden></section>
+    <section class="game-state-screen" id="invalid-game-screen" hidden></section>
+  </main>
+</body>
+</html>

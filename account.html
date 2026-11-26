@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f6">
+  <meta name="description" content="Your LearnSphere learner profile and learning progress.">
+  <title>My Profile · LearnSphere</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/progress.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/profile.js" defer></script>
+  <script type="module" src="js/auth-ui.js"></script>
+</head>
+<body data-auth-required="true">
+  <div id="site-header"></div>
+  <main class="page-shell profile-page">
+    <section class="profile-hero" aria-labelledby="profile-title">
+      <div class="profile-avatar" id="profile-avatar" aria-hidden="true">L</div>
+      <div class="profile-hero-copy">
+        <p class="profile-kicker"><span aria-hidden="true">✦</span> YOUR LEARNSPHERE PROFILE</p>
+        <h1 id="profile-title">Hello, Learner!</h1>
+        <p>Your learning journey, all in one place.</p>
+        <p class="profile-auth-meta" id="profile-auth-meta" hidden></p>
+      </div>
+      <div class="profile-level-pill"><span class="profile-level-star" aria-hidden="true">✧</span><span><small>YOUR CURRENT LEVEL</small><strong id="profile-level">Level 1 · Adventurer</strong></span></div>
+      <span class="profile-hero-orb profile-hero-orb-one" aria-hidden="true"></span>
+      <span class="profile-hero-orb profile-hero-orb-two" aria-hidden="true"></span>
+    </section>
+
+    <section class="profile-stat-grid" aria-label="Learning summary">
+      <article class="profile-stat-card"><span class="profile-stat-icon xp" aria-hidden="true">✦</span><div><strong id="profile-xp">0</strong><span>Total XP earned</span></div></article>
+      <article class="profile-stat-card"><span class="profile-stat-icon lessons" aria-hidden="true">▦</span><div><strong id="profile-lessons">0 / 6</strong><span>Lessons completed</span></div></article>
+      <article class="profile-stat-card"><span class="profile-stat-icon streak" aria-hidden="true">♨</span><div><strong id="profile-streak">0 days</strong><span>Current learning streak</span></div></article>
+      <article class="profile-stat-card"><span class="profile-stat-icon badges" aria-hidden="true">♛</span><div><strong id="profile-badges">0 / 8</strong><span>Achievements unlocked</span></div></article>
+    </section>
+
+    <div class="profile-content-grid">
+      <div class="profile-main-column">
+        <section class="profile-panel" aria-labelledby="profile-subjects-title">
+          <div class="profile-panel-heading"><div><p class="eyebrow">KEEP EXPLORING</p><h2 id="profile-subjects-title">Your learning paths</h2></div><a href="subjects.html" class="text-link">All subjects <span aria-hidden="true">→</span></a></div>
+          <div class="profile-subject-list" id="profile-subject-list"></div>
+        </section>
+
+        <section class="profile-panel profile-achievements-panel" aria-labelledby="profile-achievements-title">
+          <div class="profile-panel-heading"><div><p class="eyebrow">MILESTONES</p><h2 id="profile-achievements-title">Your achievements</h2></div><span class="profile-panel-note" id="profile-achievement-summary">0 unlocked</span></div>
+          <div class="profile-achievement-list" id="profile-achievement-list"></div>
+        </section>
+      </div>
+
+      <aside class="profile-side-column">
+        <section class="profile-panel activity-panel" aria-labelledby="activity-title">
+          <div class="profile-panel-heading"><div><p class="eyebrow">SHOWING UP</p><h2 id="activity-title">Recent activity</h2></div><span class="activity-flame" aria-hidden="true">♨</span></div>
+          <p class="activity-summary" id="activity-summary">Every little step counts.</p>
+          <div class="activity-week" id="activity-week" aria-label="Learning activity for the last seven days"></div>
+          <div class="activity-legend"><span><i aria-hidden="true"></i> Learning day</span><span id="activity-days-count">0 of 7 days</span></div>
+          <div class="longest-streak"><span aria-hidden="true">✧</span><span>Longest streak</span><strong id="profile-longest-streak">0 days</strong></div>
+        </section>
+
+        <section class="profile-panel name-panel" aria-labelledby="display-name-title">
+          <div class="profile-panel-heading"><div><p class="eyebrow">MAKE IT YOURS</p><h2 id="display-name-title">Display name</h2></div><span class="name-panel-icon" aria-hidden="true">✎</span></div>
+          <p>Choose a nickname to see at the top of your profile.</p>
+          <form id="display-name-form" class="display-name-form">
+            <label for="display-name-input">Your nickname</label>
+            <div class="display-name-controls"><input id="display-name-input" name="displayName" type="text" maxlength="24" autocomplete="nickname" placeholder="Enter a nickname" required><button class="button button-primary" type="submit">Save</button></div>
+            <span class="profile-save-message" id="profile-save-message" role="status" aria-live="polite">Only saved on this device.</span>
+          </form>
+        </section>
+      </aside>
+    </div>
+    <p class="profile-privacy-note"><span aria-hidden="true">●</span> Your progress is saved in this browser on this device.</p>
+  </main>
+</body>
+</html>

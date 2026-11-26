@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn with a short interactive LearnSphere lesson.">
+  <title>Lesson · LearnSphere</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/progress.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/lesson.js" defer></script>
+  <script type="module" src="js/auth-ui.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="page-shell lesson-page">
+    <nav class="breadcrumbs" id="lesson-breadcrumbs" aria-label="Breadcrumb"></nav>
+    <header class="lesson-hero" id="lesson-hero"></header>
+    <section class="objectives-card" aria-labelledby="objectives-title">
+      <div class="objectives-icon" aria-hidden="true">✧</div>
+      <div><h2 id="objectives-title">Lesson Outcomes</h2><ul id="lesson-objectives"></ul></div>
+    </section>
+    <div class="lesson-content-grid">
+      <article class="lesson-reading" id="lesson-reading" aria-label="Lesson content"></article>
+      <aside class="lesson-activity" id="lesson-activity" aria-label="Interactive activity"></aside>
+    </div>
+    <section class="lesson-takeaway" id="lesson-takeaway" aria-labelledby="takeaway-title"></section>
+    <section class="lesson-finish" aria-label="Finish lesson">
+      <div class="lesson-completion-copy"><strong id="completion-heading">Ready to finish?</strong><span id="completion-message">Mark this lesson complete when you’re ready.</span></div>
+      <button class="button button-primary" id="complete-lesson" type="button">Complete lesson <span aria-hidden="true">✓</span></button>
+    </section>
+    <section class="lesson-games" aria-labelledby="lesson-games-title">
+      <div><p class="eyebrow">Ready for a challenge?</p><h2 id="lesson-games-title">Practise what you learned</h2><p>Choose a quick game based on this lesson.</p></div>
+      <div class="lesson-game-links"><a class="button button-primary" id="lesson-quiz-link" href="games.html">Play Quiz <span aria-hidden="true">→</span></a><a class="button button-secondary" id="lesson-matching-link" href="games.html">Play Matching <span aria-hidden="true">→</span></a></div>
+    </section>
+    <nav class="lesson-pagination" id="lesson-pagination" aria-label="Lesson navigation"></nav>
+  </main>
+</body>
+</html>

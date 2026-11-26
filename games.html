@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Choose a LearnSphere quiz or matching challenge.">
+  <title>Games · LearnSphere</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/games-data.js" defer></script>
+  <script src="js/progress.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/games.js" defer></script>
+  <script type="module" src="js/auth-ui.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="page-shell games-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Dashboard</a><span aria-hidden="true">›</span><span aria-current="page">Games</span></nav>
+    <section class="games-intro">
+      <div><p class="eyebrow">Learn by playing</p><h1>Choose your challenge</h1><p>Practise what you’ve learned with a quick game.</p></div>
+      <div class="games-intro-art" aria-hidden="true"><span>✦</span><i>?</i><b>✓</b></div>
+    </section>
+    <section class="game-context-panel" aria-labelledby="game-context-title">
+      <div><p class="eyebrow">Pick your topic</p><h2 id="game-context-title">What would you like to practise?</h2></div>
+      <div class="game-context-fields">
+        <label>Subject<select id="game-subject-select"></select></label>
+        <label>Lesson<select id="game-lesson-select"></select></label>
+      </div>
+    </section>
+    <section class="games-choice-section" aria-labelledby="game-types-title">
+      <div class="section-heading"><div><h2 id="game-types-title">Choose a game</h2><p>Both games use the lesson you selected above.</p></div></div>
+      <div class="game-type-grid">
+        <article class="game-type-card quiz-type-card">
+          <div class="game-type-art quiz-art" aria-hidden="true"><span class="quiz-art-mark">?</span><i>A</i><i>B</i><i>C</i></div>
+          <div class="game-type-copy"><p class="eyebrow">Think it through</p><h3>Quiz</h3><p>Answer four questions, check each answer, and see what you know.</p><a class="button button-primary" id="choose-quiz" href="game.html?type=quiz&amp;lesson=fractions">Choose Quiz <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="game-type-card matching-type-card">
+          <div class="game-type-art matching-art" aria-hidden="true"><span>?</span><span>?</span><span>?</span><span>?</span></div>
+          <div class="game-type-copy"><p class="eyebrow">Spot the pairs</p><h3>Matching</h3><p>Turn over cards and match four lesson ideas with the facts that go with them.</p><a class="button button-primary" id="choose-matching" href="game.html?type=matching&amp;lesson=fractions">Choose Matching <span aria-hidden="true">→</span></a></div>
+        </article>
+      </div>
+    </section>
+    <a class="games-back-link" id="games-back-link" href="index.html">← Back to dashboard</a>
+  </main>
+</body>
+</html>

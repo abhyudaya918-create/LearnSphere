@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f6">
+  <meta name="description" content="LearnSphere helps you explore Maths and Science, one small step at a time.">
+  <title>Dashboard · LearnSphere</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/progress.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script type="module" src="js/auth-ui.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="page-shell dashboard-page">
+    <section class="journey-card" aria-labelledby="journey-title">
+      <div class="journey-copy">
+        <p class="eyebrow">Your learning journey</p>
+        <h1 id="journey-title"><span id="level-name">Level 1 Adventurer</span></h1>
+        <div class="xp-row"><span id="journey-xp">0 XP</span><span id="next-level-xp">100 XP</span></div>
+        <div class="progress-track progress-track-light" role="progressbar" aria-label="Progress to next level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="journey-progress"></span></div>
+        <p class="journey-hint" id="journey-hint">Your next adventure is just one lesson away.</p>
+      </div>
+      <a class="journey-action" href="subjects.html"><span class="action-icon" aria-hidden="true">✦</span><span><strong>Ready for your next lesson?</strong><br><span>Choose a subject</span></span><span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="stats-grid" aria-label="Your learning statistics">
+      <article class="stat-item"><span class="stat-icon stat-yellow" aria-hidden="true">♨</span><div><strong id="stat-streak">0</strong><span>Day streak</span></div></article>
+      <article class="stat-item"><span class="stat-icon stat-blue" aria-hidden="true">✦</span><div><strong id="stat-xp">0</strong><span>Total XP</span></div></article>
+      <article class="stat-item"><span class="stat-icon stat-green" aria-hidden="true">◎</span><div><strong id="stat-games">0</strong><span>Games completed</span></div></article>
+      <article class="stat-item"><span class="stat-icon stat-yellow" aria-hidden="true">♛</span><div><strong id="stat-badges">0</strong><span>Badges</span></div></article>
+    </section>
+
+    <section class="section-block" aria-labelledby="achievements-title">
+      <div class="section-heading"><div><h2 id="achievements-title">Achievements</h2><p>Little milestones on your learning journey.</p></div><span class="section-meta" id="achievement-count">0 of 8 unlocked</span></div>
+      <div class="achievement-grid" id="achievement-grid"></div>
+    </section>
+
+    <section class="section-block subjects-block" aria-labelledby="subjects-title">
+      <div class="section-heading"><div><h2 id="subjects-title">Your Subjects</h2><p id="overall-progress">0 of 6 lessons complete</p></div><a href="subjects.html" class="text-link">View all <span aria-hidden="true">→</span></a></div>
+      <div class="subject-shortcuts">
+        <a class="subject-shortcut maths" href="lessons.html?subject=maths"><span class="subject-icon" aria-hidden="true">▦</span><span><strong>Maths</strong><small id="dashboard-maths-progress">0 of 3 lessons complete</small></span><span class="shortcut-arrow" aria-hidden="true">→</span></a>
+        <a class="subject-shortcut science" href="lessons.html?subject=science"><span class="subject-icon" aria-hidden="true">✿</span><span><strong>Science</strong><small id="dashboard-science-progress">0 of 3 lessons complete</small></span><span class="shortcut-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
